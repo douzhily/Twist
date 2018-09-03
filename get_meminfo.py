@@ -29,7 +29,7 @@ def get_mem_info(pkg_name, native_heap_data, dalvic_heap_data):
 def mem_info_format():
 	native_heap_data = []
 	dalvic_heap_data = []
-	times = int(raw_input())
+	times = int(raw_input('enter how many seconds you want to run : '))
 	for i in range(times):
 		get_mem_info(pkg_name, native_heap_data, dalvic_heap_data)
 		time.sleep(1)
