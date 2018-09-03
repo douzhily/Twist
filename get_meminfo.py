@@ -17,14 +17,15 @@ def get_mem_info(pkg_name, native_heap_data, dalvic_heap_data):
 		#print mem_i
 		native_heap_id = str(mem_i).find('Native Heap')
 		dalvic_heap_id = str(mem_i).find('Dalvik Heap')
-		if native_heap_id == 2:
+		if native_heap_id > 0:
 			print mem_i
 			native_info = mem_i.split()[2]
 			native_heap_data.append(int(native_info))
-		elif dalvic_heap_id == 2:
+		elif dalvic_heap_id > 0:
 			print mem_i
 			dalvic_info = mem_i.split()[2]
 			dalvic_heap_data.append(int(dalvic_info))
+			break
 
 def mem_info_format():
 	native_heap_data = []
@@ -36,6 +37,3 @@ def mem_info_format():
 	print native_heap_data
 	print dalvic_heap_data
 	return times, native_heap_data, dalvic_heap_data
-
-#x = mem_info_format()
-#print x[1]
