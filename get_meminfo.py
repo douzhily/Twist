@@ -5,9 +5,8 @@ import subprocess
 import time
 
 devices = os.popen('adb devices').readlines()
-#print devices
 
-pkg_name = 'com.zhihu.android'
+pkg_name = raw_input('Please enter package name : ').split()[0]
 
 def get_mem_info(pkg_name, native_heap_data, dalvic_heap_data):
 
