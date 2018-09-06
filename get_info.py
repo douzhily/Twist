@@ -55,7 +55,7 @@ def info_format():
 	native_heap_data = []
 	dalvic_heap_data = []
 	cpu_data = []
-	times = int(raw_input('enter how many seconds you want to run : '))
+	times = int(raw_input('enter how many times you want to run : '))
 	for i in range(times):
 		get_mem_info(pid, native_heap_data, dalvic_heap_data)
 		get_cpu_info(pid, cpu_data)
