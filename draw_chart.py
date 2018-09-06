@@ -28,7 +28,7 @@ def draw_cpu_data(times, cpu_data):
 	plt.show()
 
 def draw():
-	data = get_info.mem_info_format()
+	data = get_info.info_format()
 	times = data[0]
 	native_heap = data[1]
 	dalvic_heap = data[2]
